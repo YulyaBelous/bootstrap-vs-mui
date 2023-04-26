@@ -1,0 +1,109 @@
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import Table from 'react-bootstrap/Table';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button} from "react-bootstrap";
+import {Plus, PencilFill, CardList, FiletypePdf, PersonCircle, PersonFillLock, HouseFill, Trash3Fill, FileTextFill} from "react-bootstrap-icons";
+
+
+const PageWithBootstrap = () => {
+
+return(
+    <>
+        <Navbar bg="primary" variant="dark">
+            <Container className="ms-auto">
+                <Navbar.Brand href="#home"> <FileTextFill size={30}/> Invoice</Navbar.Brand>
+                <Nav className="me-4">
+                    <Nav.Link href="#"><HouseFill/> Home</Nav.Link>
+                    <Nav.Link href="#"> <CardList/> Entities</Nav.Link>
+                    <Nav.Link href="#"> <PersonFillLock/> Administration</Nav.Link>
+                    <Nav.Link href="#"> <PersonCircle/> Account</Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
+            <Button style={{marginBottom: 10, marginTop: 10, marginLeft: 1350}} variant="primary"> <Plus size={29}/> New invoice</Button>
+        <Table striped bordered hover style={{marginLeft: 5}}>
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Number</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+                <th>Supplier</th>
+                <th>Customer</th>
+                <th  width='155px'></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>456521</td>
+                <td>12.04.2023</td>
+                <td>Generating invoice</td>
+                <td>100</td>
+                <td>10</td>
+                <td>1000</td>
+                <td>Shevchenko T. G.</td>
+                <td>Altronica Systems OÜ</td>
+                <td> <Button variant="primary"><PencilFill/></Button> <Button variant="secondary"><FiletypePdf/></Button> <Button variant="danger"><Trash3Fill/></Button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>203245</td>
+                <td>05.05.2023</td>
+                <td>Web page creation</td>
+                <td>200</td>
+                <td>10</td>
+                <td>2000</td>
+                <td>Lesya Ukrainka</td>
+                <td>Altronica Systems OÜ</td>
+                <td> <Button variant="primary"><PencilFill/></Button> <Button variant="secondary"><FiletypePdf/></Button> <Button variant="danger"><Trash3Fill/></Button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>809546</td>
+                <td>26.01.2023</td>
+                <td>Pet the cat</td>
+                <td>500</td>
+                <td>10</td>
+                <td>5000</td>
+                <td>Omar Khayyam</td>
+                <td>Altronica Systems OÜ</td>
+                <td> <Button variant="primary"><PencilFill/></Button> <Button variant="secondary"><FiletypePdf/></Button> <Button variant="danger"><Trash3Fill/></Button></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>102222</td>
+                <td>24.04.2023</td>
+                <td>Testing invoice</td>
+                <td>100</td>
+                <td>5</td>
+                <td>500</td>
+                <td>Shevchenko T. G.</td>
+                <td>Altronica Systems OÜ</td>
+                <td> <Button variant="primary"><PencilFill/></Button> <Button variant="secondary"><FiletypePdf/></Button> <Button variant="danger"><Trash3Fill/></Button></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>099999</td>
+                <td>30.03.2023</td>
+                <td>Create page with bootstrap and mui</td>
+                <td>100</td>
+                <td>10</td>
+                <td>1000</td>
+                <td>Raffaello Giovagnoli</td>
+                <td>Altronica Systems OÜ</td>
+                <td> <Button variant="primary"><PencilFill/></Button> <Button variant="secondary"><FiletypePdf/></Button> <Button variant="danger"><Trash3Fill/></Button></td>
+            </tr>
+            </tbody>
+        </Table>
+    </>
+);
+
+}
+
+export default PageWithBootstrap;
